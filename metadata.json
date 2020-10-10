@@ -1,0 +1,8 @@
+{
+  "name": "Xorg or Wayland",
+  "description": "Display 'Xorg' or 'Wayland' on the system tray depending on which one is running",
+  "uuid": "xorg-or-wayland@soulserv.net",
+  "shell-version": [
+    "3.36"
+  ]
+}
