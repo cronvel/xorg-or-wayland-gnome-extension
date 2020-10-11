@@ -3,7 +3,7 @@ Install it locally (dev):
 cp extension.js metadata.json ~/.local/share/gnome-shell/extensions/xorg-or-wayland@soulserv.net
 
 Package it for publishing to gnome.org:
-zip -j extension.js metadata.json extension.zip
+rm extension.zip && zip -j extension.zip metadata.json extension.js
 
 Publish to:
 https://extensions.gnome.org/upload/
