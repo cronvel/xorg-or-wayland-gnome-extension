@@ -1,5 +1,8 @@
 
-Run:
+Install it locally (dev):
+cp extension.js metadata.json ~/.local/share/gnome-shell/extensions/xorg-or-wayland@soulserv.net
+
+Package it for publishing to gnome.org:
 zip -j extension.js metadata.json extension.zip
 
 Publish to:

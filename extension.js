@@ -58,9 +58,7 @@ class Extension {
 			track_hover: false
 		} ) ;
 
-		var env = get_env() ;
-
-		this.type = env.XDG_SESSION_TYPE ;
+		this.type = GLib.getenv( 'XDG_SESSION_TYPE' ) ;
 
 		switch ( this.type.toLowerCase() ) {
 			case 'x11' :
@@ -94,24 +92,5 @@ class Extension {
 
 function init() {
 	return new Extension() ;
-}
-
-
-
-function get_env() {
-	var env = {} ;
-
-	GLib.get_environ().forEach( raw => {
-		var key , value ,
-			index = raw.indexOf( '=' ) ;
-
-		if ( index > 0 ) {
-			key = raw.slice( 0 , index ) ;
-			value = raw.slice( index + 1 ) ;
-			env[ key ] = value ;
-		}
-	} ) ;
-
-	return env ;
 }
 
